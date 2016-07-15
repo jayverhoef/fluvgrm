@@ -61,10 +61,10 @@ Figures 5 and 6 are stored on the R temp directory, which can be found with
 tempdir()
 ```
 
-and you can navigate to it in your file system to see the pdfs that were created.
+and you can navigate to it in your file system to see the pdfs that were created.  Figure 5 on the raw temperature data is named "FCFUtemp.pdf," and Figure 6 on the residuals is names "FCFUresid.pdf."
 
 -------------
-*Simulations Figure*
+*Simulation Figure*
 
 The script used to access the data and create Figure 2 is the file 'simulationFigures.R' in the scripts folder.  To see where that is in your file system use:
 
@@ -84,11 +84,17 @@ Figure 2 is now stored on the R temp directory, which can be found with
 tempdir()
 ```
 
-and you can navigate to it in your file system to see the pdf that was created.
-
+and you can navigate to it in your file system to see the pdf that was created. Figure 2 on is named "FCVAvsFCSD4Fig.pdf."
 
 -------------
-*Simulations*
+*Simulation*
+
+The script used to run the simulations that created Figure 2 is called "simulation.R in the scripts folder.  To see where that is in your file system use:
+
+```
+system.file("scripts/simulation.R", package = "fluvgrm")
+```
+It takes a while to run the 5,000 simulations, so they are stored in the package as data.  To see how to access the simulation data, examine the script on how the figure is created.  The simulation script uses `set.seed(2)` so the results should be completely reproducible.
 
 -------------
 ##### Disclaimer

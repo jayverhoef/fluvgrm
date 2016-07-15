@@ -80,7 +80,7 @@ set.seed(2)
 # set the breaks
 brks = c(2*(0:11) + .00001)
 # number of simulations
-niter = 10
+niter = 5000
 # create matrices to store outputs
 storeFCVA = matrix(NA, nrow = length(brks) - 1, ncol = niter)
 storeFCSD = matrix(NA, nrow = length(brks) - 1, ncol = niter)
@@ -120,8 +120,8 @@ for(i in 1:niter) {
 }
 
 setwd('/home/jay/Data/fluvgrm/fluvgrm/data')
-save(storeFCVA, file = 'data/storeFCVA.rda')
-save(storeFCSD, file = 'data/storeFCSD.rda')
+save(storeFCVA, file = 'storeFCVA.rda')
+save(storeFCSD, file = 'storeFCSD.rda')
 # store the last iteration just to see how each was saved
 # and use bin classes etc. for graphics
 save(FCVA, file = 'FCVA.rda')
