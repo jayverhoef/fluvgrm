@@ -1,8 +1,9 @@
 # fluvgrm: An R package in support of publication, "The Torgegram for Fluvial Variography: Characterizing Spatial Dependence on Stream Networks." 
 
-#### Jay M. Ver Hoef and Dale. L. Zimmerman
+#### Jay M. Ver Hoef<sup>a</sup> and Dale. L. Zimmerman<sup>b</sup>
 
-#### NOAA Fisheries (NMFS) Alaska Fisheries Science Center and Department of Statistics and Actuarial Science, University of Iowa
+#### <sup>a</sup>NOAA Fisheries (NMFS) Alaska Fisheries Science Center, and 
+#### <sup>b</sup>Department of Statistics and Actuarial Science, University of Iowa
 
 As a scientific work, and in keeping with common scientific practicies, we kindly request that you cite our research project and applicable publications if you use our work(s) or data in your publications or presentations. Additionally, we strongly encourage and welcome collaboration to promote use of these data in the proper context and scope.  The publication is currently in revision:
 
