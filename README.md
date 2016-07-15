@@ -75,7 +75,7 @@ system.file("scripts/simulationFigure.R", package = "fluvgrm")
 To run the whole script from within R use:
 
 ```
-source(system.file("scripts/simulationFigures.R", package = "fluvgrm"))
+source(system.file("scripts/simulationFigure.R", package = "fluvgrm"))
 ```
 
 Figure 2 is now stored on the R temp directory, which can be found with
