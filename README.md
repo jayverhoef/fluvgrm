@@ -28,7 +28,7 @@ Also, the core Torgegram functions have been incorporated in the SSN package, so
 ``` r
 install.packages("SSN")
 ```
-We also like the color palatte provided by viridis, so that package should be downloaded to run scripts without any modifications.
+We also like the color palette provided by viridis, so that package should be downloaded to run scripts without any modifications.
 
 ``` r
 install.packages("viridis")
