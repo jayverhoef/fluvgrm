@@ -1,0 +1,11 @@
+Package: fluvgrm
+Type: Package
+Title: Data in Support of Fluvial Variography
+Version: 1.0.0
+Date: 2016-6-30
+Depends: R (>= 3.0.2), SSN 
+Author: Jay Ver Hoef and Dale Zimmerman
+Maintainer: Jay Ver Hoef <ver.hoef@SpatialStreamNetworks.com>
+Description: Example data set and code used in JCGS paper by Zimmerman and Ver Hoef.
+License: GPL-2
+LazyLoad: yes
