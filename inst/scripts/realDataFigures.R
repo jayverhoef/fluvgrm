@@ -14,7 +14,7 @@ library('viridis')
 #------------------------------------------------------------------------------
 
 # load the SpatialStreamNetwork object
-SSN4 <- importSSN(system.file("lsndata/SSN4.ssn", 
+SSN4 <- importSSN(system.file("lsndata/LewWillCol.ssn", 
 	package = "fluvgrm"), o.write = TRUE)
 
 # pull out the data.frame of observed data
