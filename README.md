@@ -28,7 +28,12 @@ Also, the core Torgegram functions have been incorporated in the SSN package, so
 ``` r
 install.packages("SSN")
 ```
+We also like the color palatte provided by viridis, so that package should be downloaded to run scripts without any modifications.
 
+``` r
+install.packages("viridis")
+```
+After all packages are installed, the scripts used to access the data and create Figures 5 and 6 are contained in the file realDataFigures.R in the scripts folder.
 
 ##### Disclaimer
 
