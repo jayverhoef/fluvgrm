@@ -49,9 +49,11 @@ maxbrksfu = 3.5e+05
 fcbrks = c(-.001, (1:nbrksfc)/nbrksfc*maxbrksfc)
 fubrks = c(-.001, (1:nbrksfu)/nbrksfu*maxbrksfu)
 
-# set the working directory to save the figure
-setwd("/home/jay/Data/fluvgrm/fluvgrm/inst/figures")
+# set the working directory to R's temp directory to save figures
+setwd(tempdir())
+# to see where this is on your file system
 getwd()
+# the figures will go away with the temp directory when R quits
 
 #------------------------------------------------------------------------------
 #      create pdf figure in current working directory
