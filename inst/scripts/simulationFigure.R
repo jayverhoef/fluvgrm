@@ -53,7 +53,7 @@ SLDF = as.SpatialLinesDataFrame(simTU)
 SPDF = as.SpatialPointsDataFrame(simTU)
 
 # set the working directory to save the figure
-setwd("/home/jay/Data/fluvgrm/fluvgrm/inst/figures")
+setwd(tempdir())
 getwd()
 
 # create plot
