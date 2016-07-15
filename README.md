@@ -39,11 +39,11 @@ After all packages are installed, the script used to access the data and create 
 system.file("scripts/realDataFigures.R", package = "fluvgrm")
 ```
 
-You can run the whole script from within R use:
+To run the whole script from within R use:
 
 ```
 source(system.file("scripts/realDataFigures.R", package = "fluvgrm"))
-``
+```
 
 ##### Disclaimer
 
