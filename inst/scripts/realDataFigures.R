@@ -22,7 +22,7 @@ DF = getSSNdata.frame(SSN4)
 # fit a classical regression model to the observed data
 lmout = lm(STREAM_AUG ~ upDist + upDist:upDist + ELEV + ELEV:ELEV, 
     data = DF)
- <# compute residuals on the fitted model and add to data.frame
+# compute residuals on the fitted model and add to data.frame
 DF[,'resid'] = residuals(lmout)
 # put the data.frame back into the SpatialStreamNetwork object
 SSN4 = putSSNdata.frame(DF, SSN4)
