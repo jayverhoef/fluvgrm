@@ -33,12 +33,17 @@ We also like the color palatte provided by viridis, so that package should be do
 ``` r
 install.packages("viridis")
 ```
-After all packages are installed, the script used to access the data and create Figures 4 (enhanced with color), 5, and 6 is the file 'realDataFigures.R' in the scripts folder.  You can run the whole script from within R using
+After all packages are installed, the script used to access the data and create Figures 4 (enhanced with color), 5, and 6 is the file 'realDataFigures.R' in the scripts folder.  To see where that is in your file system use:
 
 ```
-library(fluvgrm)
 system.file("scripts/realDataFigures.R", package = "fluvgrm")
 ```
+
+You can run the whole script from within R use:
+
+```
+source(system.file("scripts/realDataFigures.R", package = "fluvgrm"))
+``
 
 ##### Disclaimer
 
