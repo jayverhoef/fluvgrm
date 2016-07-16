@@ -16,7 +16,7 @@ LewWillCol.ssn data folder
   There is also 1 text file, netID72.txt, which contain the topological information
   for the stream network in the Lewis/Willamette rivers in the Columbia basin dataset.
 
-  Attribute data is also stored within each of the spatial datasets. The column
+  Attribute data are also stored within each of the spatial datasets. The column
   names are defined as follows:
 
   edges:
@@ -55,28 +55,28 @@ LewWillCol.ssn data folder
     SNAP_Y:
     STREAM_AUG: mean daily temperature from 15 July - 31 August.  This is the modeled response variable
     ID_1KM:
-    FTYPE: This attribute is only for the predicted temperature locations. This attribute is the NHDPlus feature type and can have one of two values, either 'StreamRiver' or 'ArtificialPath'. This is an NHDPlus defined attribute.
-    WATERBODY: This attribute is only for the predicted temperature locations. This attribute is for prediction points that fall within an NHDPlus water body feature. Values may be 0 or 1. 1 represents a point or stream segment within a water body feature. This attribute was generated at the Boise Lab to designate line segments that fall within water bodies.
-    TAILWATER: Categorical predictor variable coded as 0/1 to indicate whether a stream temperature site is downstream from a reservoir that creates an anomalously cold tailwater.
-    ELEV: Elevation in meters.
-    CANOPY: Percent canopy for each 1 km stream segment.
-    SLOPE: Slope (rise/run) for each NHDPlus stream reach.
-    PRECIP: NHDPlus precipitation measure (mm)
+    FTYPE:  This attribute is only for the predicted temperature locations. This attribute is the NHDPlus feature type and can have one of two values, either 'StreamRiver' or 'ArtificialPath'. This is an NHDPlus defined attribute.
+    WATERBODY:  This attribute is only for the predicted temperature locations. This attribute is for prediction points that fall within an NHDPlus water body feature. Values may be 0 or 1. 1 represents a point or stream segment within a water body feature. This attribute was generated at the Boise Lab to designate line segments that fall within water bodies.
+    TAILWATER:  Categorical predictor variable coded as 0/1 to indicate whether a stream temperature site is downstream from a reservoir that creates an anomalously cold tailwater.
+    ELEV:   Elevation in meters.
+    CANOPY:   Percent canopy for each 1 km stream segment.
+    SLOPE:  Slope (rise/run) for each NHDPlus stream reach.
+    PRECIP:   NHDPlus precipitation measure (mm)
     CUMDRAINAG:	Cumulative drainage area (sq. km) for each NHDPlus stream reach
-    Y_COORD: coordinate of Albers Equal Area projection with units meters, used as surrogate for latitude.
-    NLCD11PC: Percent cumulative open water from NHDPlus, derived from National Land Cover Dataset.
-    GLACIER: The percentage of the catchment area classified as glacier at each temperature site.
-    BFI: Base flow index. Base flow to total flow as a percentage.
-    Air_Aug: August mean air temperature for the NorWeST processing unit.
-    Flow_Aug: August mean stream flow metric for the NorWeST processing unit.
-    OBSPREDID: A unique ID for each feature.
+    Y_COORD:  coordinate of Albers Equal Area projection with units meters, used as surrogate for latitude.
+    NLCD11PC:   Percent cumulative open water from NHDPlus, derived from National Land Cover Dataset.
+    GLACIER:  The percentage of the catchment area classified as glacier at each temperature site.
+    BFI:  Base flow index. Base flow to total flow as a percentage.
+    Air_Aug:  August mean air temperature for the NorWeST processing unit.
+    Flow_Aug:   August mean stream flow metric for the NorWeST processing unit.
+    OBSPREDID:  A unique ID for each feature.
     NEAR_FID:	the FID of the nearest edge feature
     NEAR_DIST:	the distance between the original site coordinates and the nearest
   	   	edge
     NEAR_X:	x coordinate
     NEAR_Y:	y coordinate
     NEAR_ANGLE:	the angle between the original site location and the nearest
-  		point on the closest edge
+      point on the closest edge
     rid:	Reach identifier of the edge the site resides on
     ratio:	Site ratio value; provides the proportional distance along the
     		edge to the site location
