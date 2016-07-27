@@ -27,20 +27,21 @@ Installation
 
 Installation of this R data package is done through the `devtools::install_github()` function or by downloading the [source package from the latest release](https://github.com/jayverhoef/fluvgrm).
 
-``` r
+```
 library("devtools")
 install_github("jayverhoef/fluvgrm")
 ```
 Also, the core Torgegram functions have been incorporated in the SSN package, so that needs to be downloaded from CRAN.
 
-``` r
+```
 #install.packages("SSN")
 # temporarily, use development version on my github site
 install_github("jayverhoef/SSN")
 ```
 We also like the color palette provided by viridis, so that package should be downloaded to run scripts without any modifications.
 
-``` r
+```
+library(fluvgrm)
 install.packages("viridis")
 ```
 
