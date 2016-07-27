@@ -44,6 +44,16 @@ We also like the color palette provided by viridis, so that package should be do
 install.packages("viridis")
 ```
 
+Examine the Example Data
+------------------------
+
+The help file for the example data set can found by typing
+
+```
+help(LewWillCol.ssn)
+```
+in R.  The scripts below show how to import it and obtain results in the paper.
+
 Run R Scripts
 -------------
 
@@ -90,7 +100,7 @@ Figure 2 is now stored on the R temp directory, which can be found with
 tempdir()
 ```
 
-and you can navigate to it in your file system to see the pdf that was created. Figure 2 on is named "FCVAvsFCSD4Fig.pdf."
+and you can navigate to it in your file system to see the pdf that was created. Figure 2 is named "FCVAvsFCSD4Fig.pdf."
 
 -------------
 *Simulation*
