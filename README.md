@@ -41,7 +41,6 @@ install_github("jayverhoef/SSN")
 We also like the color palette provided by viridis, so that package should be downloaded to run scripts without any modifications.
 
 ```
-library(fluvgrm)
 install.packages("viridis")
 ```
 
@@ -51,6 +50,7 @@ Examine the Example Data
 The help file for the example data set can found by typing
 
 ```
+library(fluvgrm)
 help(LewWillCol.ssn)
 ```
 in R.  The scripts below show how to import it and obtain results in the paper.
