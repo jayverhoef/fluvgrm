@@ -82,7 +82,7 @@ brks = c(2*(0:11) + .00001)
 # number of simulations
 niter = 5000
 # create matrices to store outputs
-storeFCVA = matrix(NA, nrow = length(brks) - 1, ncol = niter)
+storeFCWA = matrix(NA, nrow = length(brks) - 1, ncol = niter)
 storeFCSD = matrix(NA, nrow = length(brks) - 1, ncol = niter)
 # begin simulation
 for(i in 1:niter) {
@@ -101,14 +101,14 @@ for(i in 1:niter) {
 	df2C = df2[Fcv == 1]
   # classify distances into distance bins
 	cutvec = cut(Dsv[Fcv == 1], brks)
-  # compute volume-adjusted semivariogram by averaging in bins
-  FCVA = cbind(
+  # compute weight-adjusted semivariogram by averaging in bins
+  FCWA = cbind(
 		aggregate(Dsv[Fcv == 1], by = list(cutvec), mean),
 		FUSDbar - aggregate(df2V, by = list(cutvec), mean)[2],
 	  aggregate(df2V, by = list(cutvec), function(x) {length(x)})[,2]
 		)
-	colnames(FCVA) = c('distClass','meanDist','FCVA','npair')
-  storeFCVA[,i] = FCVA$FCVA
+	colnames(FCWA) = c('distClass','meanDist','FCWA','npair')
+  storeFCWA[,i] = FCWA$FCWA
   # compute unadjusted semivariogram by averaging in bins
 	FCSD = cbind(
 		aggregate(Dsv[Fcv == 1], by = list(cutvec), mean),
@@ -120,11 +120,11 @@ for(i in 1:niter) {
 }
 
 setwd('/home/jay/Data/fluvgrm/fluvgrm/data')
-save(storeFCVA, file = 'storeFCVA.rda')
+save(storeFCWA, file = 'storeFCWA.rda')
 save(storeFCSD, file = 'storeFCSD.rda')
 # store the last iteration just to see how each was saved
 # and use bin classes etc. for graphics
-save(FCVA, file = 'FCVA.rda')
+save(FCWA, file = 'FCWA.rda')
 save(FCSD, file = 'FCSD.rda')
 
 

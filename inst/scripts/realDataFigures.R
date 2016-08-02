@@ -30,9 +30,8 @@ SSN4 = putSSNdata.frame(DF, SSN4)
 #------------------------------------------------------------------------------
 #  plot the SpatialStreamNetwork object and color response variable
 #------------------------------------------------------------------------------
-
-plotSSN(SSN4, VariableName = 'resid', pch = 19, cex = 1.5,
-  addFuncColName = 'afvArea')
+  plotSSN(SSN4, VariableName = 'resid', pch = 19, cex = 1.2,
+    addFuncColName = 'afvArea', strCol = 'grey50')
 
 # to create the neighborhood matrix from scratch, use the following command
 # Mat = SSNreachNei(SSN4)
