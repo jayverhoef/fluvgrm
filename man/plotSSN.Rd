@@ -18,9 +18,9 @@ plotSSN(x, VariableName = NULL, addFuncColName = NULL, nbrks = 8,
 
 \item{strCol}{color of the stream lines. Default is 'blue'.}
 
-\item{...}{other arguments passed from the points function}
+\item{strLwd}{line width for streams.  Ignored if addFuncColName is used.}
 
-\item{strLwd:}{line width for streams.  Ignored if addFuncColName is used.}
+\item{...}{other arguments passed from the \code{\link{points}} function}
 }
 \value{
 a map of a SpatialStreamNetwork object using sp plotting functions.
@@ -28,10 +28,40 @@ a map of a SpatialStreamNetwork object using sp plotting functions.
 \description{
 Plotting Function for SpatialStreamNetwork Objects
 }
+\examples{
+SSN4 <- importSSN(system.file("lsndata/LewWillCol.ssn",
+	 package = "fluvgrm"), o.write = TRUE)
+# default plot with blue lines for stream segments and
+# black + for data locations
+plotSSN(SSN4)
+# plot with response variable colored by value
+plotSSN(SSN4, VariableName = 'STREAM_AUG', pch = 19, cex = 1.2,
+  addFuncColName = 'afvArea', strCol = 'grey50')
+# to run a script that will create Fig. 4-6 in the Zimmerman and
+# Ver Hoef paper "The Torgegram for Fluvial Variography: Characterizing
+# Spatial Dependence on Stream Networks" navigate to the script on your
+# computer found here:
+system.file("scripts/realDataFigures.R", package = "fluvgrm")
+# if you run it from source,
+source(system.file("scripts/realDataFigures.R", package = "fluvgrm"))
+# Figures 5 and 6 are stored on the R temp directory,
+# which can be found with
+tempdir()
+# and you can navigate to it in your file system to see the pdfs
+# that were created. Figure 5 on the raw temperature data is named
+# "FCFUtemp.pdf," and Figure 6 on the residuals is names "FCFUresid.pdf."
+# The script used to access the data and create Figure 2 is the file
+# "simulationFigures.R" in the scripts folder. To see where that is
+# in your file system use:
+system.file("scripts/simulationFigure.R", package = "fluvgrm")
+# To run the whole script from within R use:
+source(system.file("scripts/simulationFigure.R", package = "fluvgrm"))
+# Figure 2 is now stored on the R temp directory, which can be found with
+tempdir()
+# and you can navigate to it in your file system to see the pdf that was
+# created. Figure 2 is named "FCVAvsFCSD4Fig.pdf."
+}
 \author{
 Jay Ver Hoef
-}
-\seealso{
-\code{\link{plotPointsRGB}}, \code{\link{rect}},
 }
 

@@ -16,11 +16,13 @@ addBreakColorLegend(xleft, ybottom, xright, ytop, breaks, colors,
 
 \item{ytop}{a scalar of top y position.}
 
+\item{breaks}{the breaks between color classes.  Needs a lower bound, and upper bound, so there should be one more break than number of classes.}
+
 \item{colors}{a vector of colors, should have one less element than the number of breaks.}
 
-\item{brks}{the breaks between color classes.  Needs a lower bound, and upper bound, so there should be one more break than number of classes.}
+\item{printFormat}{a character variable in '4.2' format where the 4 control the number of digits before the decimal, and 2 controls the number of digits after the decimal.}
 
-\item{printFormat:}{a character variable in '4.2' format where the 4 control the number of digits before the decimal, and 2 controls the number of digits after the decimal.}
+\item{...}{other arguments passed from the \code{\link{text}} function}
 }
 \value{
 add a color ramp legend as a rectangle to the currently active plot
@@ -32,6 +34,6 @@ Adds a Legend to sp Plots with Colors and Breaks
 Jay Ver Hoef
 }
 \seealso{
-\code{\link{plotPointsRGB}}, \code{\link{rect}},
+\code{\link{rect}},
 }
 

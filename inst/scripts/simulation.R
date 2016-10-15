@@ -102,29 +102,29 @@ for(i in 1:niter) {
   # classify distances into distance bins
 	cutvec = cut(Dsv[Fcv == 1], brks)
   # compute weight-adjusted semivariogram by averaging in bins
-  FCWA = cbind(
+  FCWAlast = cbind(
 		aggregate(Dsv[Fcv == 1], by = list(cutvec), mean),
 		FUSDbar - aggregate(df2V, by = list(cutvec), mean)[2],
 	  aggregate(df2V, by = list(cutvec), function(x) {length(x)})[,2]
 		)
-	colnames(FCWA) = c('distClass','meanDist','FCWA','npair')
-  storeFCWA[,i] = FCWA$FCWA
+	colnames(FCWAlast) = c('distClass','meanDist','FCWA','npair')
+  storeFCWA[,i] = FCWAlast$FCWA
   # compute unadjusted semivariogram by averaging in bins
-	FCSD = cbind(
+	FCSDlast = cbind(
 		aggregate(Dsv[Fcv == 1], by = list(cutvec), mean),
 		aggregate(df2C, by = list(cutvec), mean)[2],
 	  aggregate(df2C, by = list(cutvec), function(x) {length(x)})[,2]
 		)
-	colnames(FCSD) = c('distClass','meanDist','FCSD','npair')
-  storeFCSD[,i] = FCSD$FCSD
+	colnames(FCSDlast) = c('distClass','meanDist','FCSD','npair')
+  storeFCSD[,i] = FCSDlast$FCSD
 }
 
-setwd('/home/jay/Data/fluvgrm/fluvgrm/data')
+setwd('/mnt/Hitachi2GB/00NMML/ActiveRPack/fluvgrm/fluvgrm/data/')
 save(storeFCWA, file = 'storeFCWA.rda')
 save(storeFCSD, file = 'storeFCSD.rda')
 # store the last iteration just to see how each was saved
 # and use bin classes etc. for graphics
-save(FCWA, file = 'FCWA.rda')
-save(FCSD, file = 'FCSD.rda')
+save(FCWAlast, file = 'FCWAlast.rda')
+save(FCSDlast, file = 'FCSDlast.rda')
 
 

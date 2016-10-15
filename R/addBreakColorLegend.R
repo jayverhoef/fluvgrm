@@ -12,11 +12,12 @@
 #' @param ybottom a scalar of bottom y position.
 #' @param xright a scalar of the right x position.
 #' @param ytop a scalar of top y position.
-#' @param brks the breaks between color classes.  Needs a lower bound, and upper bound, so there should be one more break than number of classes.
+#' @param breaks the breaks between color classes.  Needs a lower bound, and upper bound, so there should be one more break than number of classes.
 #' @param colors a vector of colors, should have one less element than the number of breaks.
-#' @param printFormat: a character variable in '4.2' format where the 4 control the number of digits before the decimal, and 2 controls the number of digits after the decimal.
+#' @param printFormat a character variable in '4.2' format where the 4 control the number of digits before the decimal, and 2 controls the number of digits after the decimal.
+#' @param ... other arguments passed from the \code{\link{text}} function
 #'
-#' @seealso \code{\link{plotPointsRGB}}, \code{\link{rect}}, 
+#' @seealso \code{\link{rect}}, 
 
 #' @return add a color ramp legend as a rectangle to the currently active plot
 #'

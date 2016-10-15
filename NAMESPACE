@@ -1,1 +1,6 @@
 export(addBreakColorLegend, plotSSN)
+importFrom("graphics", "rect", "par", "layout", "plot", "points","text")
+importFrom("stats", "quantile")
+importFrom("SSN", "as.SpatialPointsDataFrame", "as.SpatialLinesDataFrame")
+importFrom("sp", "plot")
+importFrom("viridis", "viridis")

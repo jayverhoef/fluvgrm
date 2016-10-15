@@ -26,7 +26,7 @@ LewWillCol.ssn data folder
                 was initially drawn, or its latest update. 
     RESOLUTION: This differentiates the 1:24k scale from the 1:100k scale 
                 NHD. In our case we are using 1:100k, so the field is always 
-                populated with “Medium”.
+                populated with "Medium".
     GNIS_ID:	Geographic Names Information System identifier
     GNIS_Name: 	Feature name as found in the Geographic Names Information 
                 System
@@ -36,7 +36,7 @@ LewWillCol.ssn data folder
                 unique within-HUC8 identifier for the reach
     FLOWDIR:    This is the flow direction. It can have one of two values, 
                 WithDigitized or Uninitialized. We only kept WithDigitized 
-                after reconditioning. This indicates it’s a flowline with 
+                after reconditioning. This indicates it's a flowline with 
                 flow and direction.
     FCODE:	Numeric code that contains the feature type and it's attributes
     		as found in the NHDFCode lookup table
@@ -66,9 +66,9 @@ LewWillCol.ssn data folder
     PERMA_FID:	ID given to a single temperature sensor site. A site may contain 
                 multiple years of data.
     SAMPLEYEAR: The year that temperature data were recorded at the location.
-    SNAP_X:     This is for the observation points only. It’s the X coordinate 
+    SNAP_X:     This is for the observation points only. It's the X coordinate 
                 of the point after it was snapped to the NHD network.
-    SNAP_Y:     This is for the observation points only. It’s the X coordinate 
+    SNAP_Y:     This is for the observation points only. It's the X coordinate 
                 of the point after it was snapped to the NHD network.
     STREAM_AUG: mean daily temperature from 1 August - 31 August.  This is the 
                 modeled response variable
@@ -132,16 +132,26 @@ A User Guide for the data can be found here:
 }
 
 \examples{
-library('SSN')
-library('fluvgrm')
-library('viridis')
+
 SSN4 <- importSSN(system.file("lsndata/LewWillCol.ssn", 
 	package = "fluvgrm"), o.write = TRUE)
-
-#pull out the site data.frame of observed data
-DF = getSSNdata.frame(SSN4)
-str(DF)
-#pull out the lines (stream reaches) data.frame
-DFrea = SSN4@data
-str(DFrea)
+# default plot with blue lines for stream segments and
+# black + for data locations
+plotSSN(SSN4)
+# plot with response variable colored by value
+plotSSN(SSN4, VariableName = 'STREAM_AUG', pch = 19, cex = 1.2,
+  addFuncColName = 'afvArea', strCol = 'grey50')
+# to run a script that will create Fig. 4-6 in the Zimmerman and
+# Ver Hoef paper "The Torgegram for Fluvial Variography: Characterizing
+# Spatial Dependence on Stream Networks" navigate to the script on your
+# computer found here:
+system.file("scripts/realDataFigures.R", package = "fluvgrm")
+# if you run it from source,
+source(system.file("scripts/realDataFigures.R", package = "fluvgrm"))
+# Figures 5 and 6 are stored on the R temp directory,
+# which can be found with
+tempdir()
+# and you can navigate to it in your file system to see the pdfs
+# that were created. Figure 5 on the raw temperature data is named
+# "FCFUtemp.pdf," and Figure 6 on the residuals is names "FCFUresid.pdf."
 }
