@@ -34,9 +34,7 @@ install_github("jayverhoef/fluvgrm")
 Also, the core Torgegram functions have been incorporated in the SSN package, so that needs to be downloaded from CRAN.
 
 ```
-#install.packages("SSN")
-# temporarily, use development version on my github site
-install_github("jayverhoef/SSN")
+install.packages("SSN")
 ```
 We also like the color palette provided by viridis, so that package should be downloaded to run scripts without any modifications.
 
