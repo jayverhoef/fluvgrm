@@ -26,7 +26,7 @@ FCSD01(object, ResponseName, breaks, ReachNei, ...)
           of intervals into which the response values are to be cut.
 }
   \item{ReachNei}{
-     A sparse matrix containing information on which stream segments are neighbors.  It is created with the \link{reachNeiSSN} function.
+     A sparse matrix containing information on which stream segments are neighbors.  It is created with the \link{SSNreachNei} function.
 }
 
   \item{...}{
