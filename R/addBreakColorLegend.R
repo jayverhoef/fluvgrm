@@ -22,9 +22,8 @@
 #' @return add a color ramp legend as a rectangle to the currently active plot
 #'
 #' @author Jay Ver Hoef
-#' @rdname addBreakColorLegend
-#' @export addBreakColorLegend 
 
+#' @export 
 
 addBreakColorLegend <- function(xleft, ybottom, xright, ytop, breaks, 
 	colors, printFormat = "4.2", ...) 

@@ -3,10 +3,11 @@ Type: Package
 Title: Data in Support of Fluvial Variography
 Version: 1.0.0
 Date: 2016-10-14
-Depends: R (>= 3.0.2), SSN 
-Imports: graphics, viridis, sp
+Depends: R (>= 3.0.2), SSN, sp
+Imports: graphics, viridis, rgeos, Matrix
 Author: Jay Ver Hoef and Dale Zimmerman
 Maintainer: Jay Ver Hoef <jay.verhoef@gmail.com>
 Description: Example data set and code used in JCGS paper by Zimmerman and Ver Hoef.
 License: GPL-2
 LazyLoad: yes
+RoxygenNote: 6.1.1

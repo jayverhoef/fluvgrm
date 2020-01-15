@@ -31,7 +31,7 @@ Installation of this R data package is done through the `devtools::install_githu
 library("devtools")
 install_github("jayverhoef/fluvgrm")
 ```
-Also, the core Torgegram functions have been incorporated in the SSN package, so that needs to be downloaded from CRAN.
+Also, basic stream network functions have been incorporated from the SSN package, so that needs to be downloaded from CRAN.
 
 ```
 install.packages("SSN")

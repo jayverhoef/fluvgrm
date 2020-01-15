@@ -19,7 +19,7 @@
 #' @return a map of a SpatialStreamNetwork object using sp plotting functions.
 #'
 #' @author Jay Ver Hoef
-#' @rdname plotSSN
+#' @export
 #' @examples
 #' SSN4 <- importSSN(system.file("lsndata/LewWillCol.ssn", 
 #'	 package = "fluvgrm"), o.write = TRUE)

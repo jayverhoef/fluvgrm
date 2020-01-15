@@ -68,7 +68,8 @@ pdf('FCWAvsFCSD4Fig.pdf', height = 8, width = 14)
   par(mar = c(5,5,1,1))
   boxplot(svgm ~ type + dist, data = alldat, col = c('white','grey70'),
 	  at = sort(c(1:11,(1:11)+.3)), boxwex = .25, xaxt = 'n', cex.lab = 2,
-	  ylab = 'Semivariogram', pch = 1, cex.axis = 1.5, ylim = c(-5,10))
+	  ylab = 'Semivariogram', pch = 1, cex.axis = 1.5, ylim = c(-5,10),
+	  xlab = '')
   points(1:11,apply(storeFCWA,1,mean), pch = 19)
   points((1:11)+.3,apply(storeFCSD,1,mean), pch = 19)
   legend(.2,-2.5, legend = c('FCWA','FCSD'), pch = c(22,15), 
